@@ -1,3 +1,33 @@
+.header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header-menu a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.header-menu a:hover {
+    text-decoration: underline;
+}
+
+
 
 body {
     background-color: #1A1A1A;
