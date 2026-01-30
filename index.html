@@ -1,47 +1,199 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>vKh Arquitectura</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>vKh Arquitectura | Arquitectura, Construcción y Supervisión</title>
+
+  <!-- Meta (we’ll refine later) -->
+  <meta name="description" content="Arquitectura, construcción y supervisión de proyectos residenciales y comerciales en El Salvador." />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-<!-- Header Items -->
 
-  <!-- 
-    <div class="header_bar">
-        <div class="header_logo"><img src="res/logo.png"  alt="logo"/></div>
-        <div class="header_item">HOME</div>
-        <div class="header_item">ABOUT</div>
-        <div class="header_item">APPS</div>
-        <div class="header_item">BOOKS</div>
-        <div class="header_item">CONTACT</div>
-    </div>
-  -->
+  <!-- =========================
+       HERO / HEADER
+  ========================== -->
+  <header class="hero">
 
-<!-- Body Contents -->
-<div class="header">
-  <div class="header-logo">
-    <img src="your-logo.png" alt="BKH Arquitectura">
-    <span>BKH Arquitectura</span>
-  </div>
-  <div class="header-menu">
-    <a href="#inicio">INICIO</a>
-    <a href="#proyectos">PROYECTOS</a>
-    <a href="#servicios">SERVICIOS</a>
-    <a href="#contacto">CONTACTO</a>
-  </div>
-</div>
-
-    <div class="body_container">
-        <div class="upper_spacer"></div>
-        <div class="full_body">
-            <div class="title_body">
-                En construccion....
-            </div>
+    <!-- Top navigation -->
+    <div class="hero-top">
+      <div class="brand">
+        <!-- Replace src later -->
+        <img src="assets/img/logo-placeholder.svg" alt="vKh Arquitectura logo" class="logo" />
+        <div class="brand-text">
+          <strong>vKh Arquitectura</strong>
+          <span>Arquitectura :: Construcción :: Supervisión</span>
         </div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#process">Cómo trabajamos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <!-- Scripts -->
-    <script src="actions.js">
-    </script>
+    <!-- Slider container -->
+    <div class="hero-slider">
+      <!-- Slides (background images via CSS later) -->
+      <div class="slide active"></div>
+      <div class="slide"></div>
+      <div class="slide"></div>
+
+      <!-- Controls -->
+      <div class="slider-controls">
+        <button class="prev" aria-label="Anterior"></button>
+        <button class="next" aria-label="Siguiente"></button>
+      </div>
+
+      <!-- Dots -->
+      <div class="slider-dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+    </div>
+
+    <!-- Centered hero content -->
+    <div class="hero-content">
+      <h1>vKh Arquitectura</h1>
+      <p class="motto">
+        Diseñamos, construimos y supervisamos proyectos funcionales y bien ejecutados.
+      </p>
+      <a href="https://wa.me/XXXXXXXXXX" class="cta-primary" target="_blank">
+        Solicitar cotización por WhatsApp
+      </a>
+    </div>
+
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+  <main>
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="section projects">
+      <header class="section-header">
+        <h2>Proyectos recientes</h2>
+      </header>
+
+      <div class="projects-grid">
+        <!-- Project card -->
+        <article class="project-card">
+          <img src="assets/img/project-placeholder.jpg" alt="Proyecto" />
+          <h3>Vivienda unifamiliar</h3>
+          <p>San Salvador</p>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project-placeholder.jpg" alt="Proyecto" />
+          <h3>Remodelación comercial</h3>
+          <p>Santa Tecla</p>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/img/project-placeholder.jpg" alt="Proyecto" />
+          <h3>Adecuación estructural</h3>
+          <p>La Libertad</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="services" class="section services">
+      <header class="section-header">
+        <h2>Servicios</h2>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <h3>Arquitectura y diseño</h3>
+          <p>Diseño funcional y adaptado a cada proyecto.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Construcción</h3>
+          <p>Ejecución de obra con equipo propio.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Supervisión</h3>
+          <p>Control técnico y seguimiento de obra.</p>
+        </article>
+
+        <article class="service-card">
+          <h3>Remodelaciones</h3>
+          <p>Intervenciones residenciales y comerciales.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <h2>¿Tienes un proyecto en mente?</h2>
+      <p>Conversemos y veamos cómo hacerlo realidad.</p>
+      <a href="https://wa.me/XXXXXXXXXX" class="cta-primary" target="_blank">
+        Escríbenos por WhatsApp
+      </a>
+    </section>
+
+    <!-- CÓMO TRABAJAMOS -->
+    <section id="process" class="section process">
+      <header class="section-header">
+        <h2>Cómo trabajamos</h2>
+      </header>
+
+      <div class="process-steps">
+        <div class="step">
+          <h3>1. Análisis</h3>
+          <p>Entendemos tus necesidades y el contexto del proyecto.</p>
+        </div>
+
+        <div class="step">
+          <h3>2. Diseño</h3>
+          <p>Propuesta arquitectónica clara y viable.</p>
+        </div>
+
+        <div class="step">
+          <h3>3. Ejecución</h3>
+          <p>Construcción y supervisión técnica.</p>
+        </div>
+
+        <div class="step">
+          <h3>4. Entrega</h3>
+          <p>Proyecto terminado y funcional.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer id="contact" class="footer">
+    <div class="footer-cta">
+      <a href="https://wa.me/XXXXXXXXXX" target="_blank">WhatsApp</a>
+    </div>
+
+    <div class="socials">
+      <a href="#" aria-label="Instagram">Instagram</a>
+      <a href="#" aria-label="TikTok">TikTok</a>
+    </div>
+
+    <small>
+      © vKh Arquitectura — El Salvador
+    </small>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>
