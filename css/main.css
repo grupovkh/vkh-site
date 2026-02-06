@@ -143,6 +143,7 @@ a {
   background-position: center;
   background-size: min(1920px, 100vw) auto;
   opacity: 0;
+  pointer-events: none;
 }
 
 .slide.active {
@@ -219,7 +220,8 @@ a {
   transform: translateX(-50%);
   display: flex;
   gap: 0.6rem;
-  z-index: 3;
+  z-index: 10;
+  pointer-events: auto;
 }
 
 .slider-dots button {
