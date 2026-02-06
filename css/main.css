@@ -145,16 +145,9 @@ a {
   opacity: 0;
 }
 
-.slide:nth-child(1) {
-  background-image: url("../assets/img/hero/hero-01.png");
-}
-
-.slide:nth-child(2) {
-  background-image: url("../assets/img/hero/hero-02.png");
-}
-
-.slide:nth-child(3) {
-  background-image: url("../assets/img/hero/hero-03.png");
+.slide.active {
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 
 

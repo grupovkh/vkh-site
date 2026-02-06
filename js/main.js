@@ -1,59 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slide');
-  const hero = document.querySelector('.hero');
-  const dotsContainer = document.querySelector('.slider-dots');
-
-  if (!slides.length || !hero || !dotsContainer) return;
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".hero-slider .slide");
+  const dotsContainer = document.querySelector(".slider-dots");
 
   let current = 0;
-  let interval = null;
-  const SLIDE_INTERVAL = 6000;
+  let interval;
+  const delay = 5000;
 
-  // --- Create dots
-  slides.forEach((_, index) => {
-    const dot = document.createElement('button');
-    dot.addEventListener('click', () => {
-      goToSlide(index);
-      restartInterval();
+  // Create dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement("button");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      goToSlide(i);
+      restart();
     });
     dotsContainer.appendChild(dot);
   });
 
-  const dots = dotsContainer.querySelectorAll('button');
+  const dots = dotsContainer.querySelectorAll("button");
 
   function goToSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
 
     current = index;
+
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
   }
 
   function nextSlide() {
-    const next = (current + 1) % slides.length;
-    goToSlide(next);
+    goToSlide((current + 1) % slides.length);
   }
 
-  function startInterval() {
-    interval = setInterval(nextSlide, SLIDE_INTERVAL);
+  function start() {
+    interval = setInterval(nextSlide, delay);
   }
 
-  function stopInterval() {
+  function stop() {
     clearInterval(interval);
   }
 
-  function restartInterval() {
-    stopInterval();
-    startInterval();
+  function restart() {
+    stop();
+    start();
   }
 
   // Pause on hover
-  hero.addEventListener('mouseenter', stopInterval);
-  hero.addEventListener('mouseleave', startInterval);
+  const slider = document.querySelector(".hero-slider");
+  slider.addEventListener("mouseenter", stop);
+  slider.addEventListener("mouseleave", start);
 
-  // Init
-  goToSlide(0);
-  startInterval();
+  start();
 });
