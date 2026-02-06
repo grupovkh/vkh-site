@@ -138,14 +138,11 @@ a {
 .slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
+  width: 100vw;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(1920px, 100vw) auto;
   opacity: 0;
-  max-width: 1920px;
-  margin: 0 auto;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .slide:nth-child(1) {
