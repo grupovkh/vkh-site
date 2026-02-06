@@ -129,9 +129,23 @@ a {
   background-size: cover;
   background-position: center;
   opacity: 0;
+  background-repeat: no-repeat;
+}
+
+.slide:nth-child(1) {
+  background-image: url("../assets/img/hero/hero-01.png");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../assets/img/hero/hero-02.png");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../assets/img/hero/hero-03.png");
 }
 
 .slide.active {
+  background-image: url("../assets/img/hero/hero-01.jpg");
   opacity: 1;
 }
 
