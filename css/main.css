@@ -13,8 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Inter, Helvetica, Arial, sans-serif;
+  font-family: var(--font-main);
   background: var(--bg-main);
   color: var(--text-main);
   line-height: 1.6;
@@ -47,6 +46,10 @@ a {
   --accent: #ffffff;
 
   --radius: 6px;
+
+  --font-brand: "Century Gothic", "Futura", "Trebuchet MS", Arial, sans-serif;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Inter, Helvetica, Arial, sans-serif;
 }
 
 /* =========================
@@ -95,6 +98,11 @@ a {
   color: var(--muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.brand-text {
+  font-family: var(--font-brand);
+  line-height: 1.2;
 }
 
 .main-nav ul {
@@ -211,9 +219,16 @@ a {
   padding: 4rem var(--side-padding);
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
 .section-header {
   max-width: var(--max-width);
   margin: 0 auto 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .section-header h2 {
