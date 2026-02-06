@@ -58,6 +58,8 @@ a {
 .hero {
   position: relative;
   min-height: 65vh;
+  max-width: 1920px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -95,7 +97,7 @@ a {
 
 .brand-text span {
   font-size: 0.7rem;
-  color: var(--muted);
+  color: var(--text-muted);
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -118,16 +120,22 @@ a {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.85;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
 
 .main-nav a:hover {
   opacity: 1;
+  color: #df2323;
 }
 
 /* Slider */
 .hero-slider {
   position: absolute;
   inset: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
 }
 
@@ -162,7 +170,13 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 35%,
+    rgba(0, 0, 0, 0.25) 60%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
   z-index: 2;
 }
 
@@ -194,8 +208,12 @@ a {
 .cta-primary {
   display: inline-block;
   padding: 0.9rem 1.4rem;
-  background: #fff;
-  color: #111;
+  background: #df2323;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
   font-size: 0.85rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -203,7 +221,7 @@ a {
 }
 
 .cta-primary:hover {
-  background: #e5e5e5;
+  background: #df2323;
 }
 
 /* Slider controls (hidden for now, usable later) */
@@ -296,6 +314,7 @@ a {
   background: var(--bg-card);
   padding: 1.75rem;
   border-radius: var(--radius);
+  text-align: left;
 }
 
 .service-card h3 {
@@ -306,6 +325,13 @@ a {
 .service-card p {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.service-card .icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.75rem;
+  color: #df2323;
 }
 
 /* =========================
@@ -349,7 +375,7 @@ a {
 
 .step p {
   font-size: 0.85rem;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 /* =========================
@@ -379,4 +405,13 @@ a {
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.socials a {
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.socials a:hover {
+  color: #df2323;
 }
