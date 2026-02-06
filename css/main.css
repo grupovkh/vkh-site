@@ -224,7 +224,28 @@ a {
 /* Slider controls (hidden for now, usable later) */
 .slider-controls,
 .slider-dots {
-  display: none;
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+  z-index: 3;
+}
+
+.slider-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.slider-dots button.active {
+  background: #df232e;
+  transform: scale(1.2);
 }
 
 /* =========================
