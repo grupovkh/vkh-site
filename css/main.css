@@ -141,7 +141,7 @@ a {
   width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: min(1920px, 100vw) auto;
+  background-size: cover;
   opacity: 0;
   pointer-events: none;
 }
