@@ -131,24 +131,24 @@ a {
 .hero-slider {
   position: relative;
   inset: 0;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
 }
 
 .slide {
   position: absolute;
   inset: 0;
-  width: 100vw;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.8s ease;
 }
 
 .slide.active {
   opacity: 1;
-  transition: opacity 0.8s ease;
 }
 
 
@@ -161,29 +161,17 @@ a {
   left: 0;
   width: 100%;
   height: 35%; /* only top portion */
+  inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.85),
-    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.35),
     rgba(0,0,0,0)
   );
   z-index: 2;
   pointer-events: none;
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.75) 0%,
-    rgba(0, 0, 0, 0.45) 35%,
-    rgba(0, 0, 0, 0.25) 60%,
-    rgba(0, 0, 0, 0.55) 100%
-  );
-  z-index: 2;
-}
 
 /* Hero content */
 .hero-content {
@@ -208,6 +196,7 @@ a {
   font-size: 1.05rem;
   color: #eaeaea;
   margin-bottom: 1.75rem;
+  text-align: center;
 }
 
 .cta-primary {
