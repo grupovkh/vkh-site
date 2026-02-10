@@ -1,55 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".hero-slider .slide");
-  const dotsContainer = document.querySelector(".slider-dots");
+  const slides = document.querySelectorAll(".slide");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
 
   let current = 0;
   let interval;
-  const delay = 5000;
 
-  // Create dots
-  slides.forEach((_, i) => {
-    const dot = document.createElement("button");
-    if (i === 0) dot.classList.add("active");
-    dot.addEventListener("click", () => {
-      goToSlide(i);
-      restart();
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
     });
-    dotsContainer.appendChild(dot);
-  });
 
-  const dots = dotsContainer.querySelectorAll("button");
-
-  function goToSlide(index) {
-    slides[current].classList.remove("active");
-    dots[current].classList.remove("active");
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
 
     current = index;
-
-    slides[current].classList.add("active");
-    dots[current].classList.add("active");
   }
 
   function nextSlide() {
-    goToSlide((current + 1) % slides.length);
+    showSlide((current + 1) % slides.length);
   }
 
-  function start() {
-    interval = setInterval(nextSlide, delay);
+  function prevSlide() {
+    showSlide((current - 1 + slides.length) % slides.length);
   }
 
-  function stop() {
+  function startAuto() {
+    interval = setInterval(nextSlide, 6000);
+  }
+
+  function resetAuto() {
     clearInterval(interval);
+    startAuto();
   }
 
-  function restart() {
-    stop();
-    start();
-  }
+  // Button controls
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    resetAuto();
+  });
 
-  // Pause on hover
-  const slider = document.querySelector(".hero-slider");
-  slider.addEventListener("mouseenter", stop);
-  slider.addEventListener("mouseleave", start);
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    resetAuto();
+  });
 
-  start();
+  // Dot controls
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      showSlide(i);
+      resetAuto();
+    });
+  });
+
+  startAuto();
 });
