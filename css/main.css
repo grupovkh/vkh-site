@@ -133,6 +133,7 @@ a {
   inset: 0;
   z-index: 0;
   overflow: hidden;
+  flex: 1;
 }
 
 .slide {
@@ -232,6 +233,20 @@ a {
   background: none;
   z-index: 10;
   pointer-events: auto;
+}
+
+.slider-dots .dot {
+  all: unset;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.slider-dots .dot.active {
+  background: #df232e;
+  transform: scale(1.2);
 }
 
 .slider-dots button {

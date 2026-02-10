@@ -55,5 +55,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+const dotsContainer = document.querySelector(".slider-dots");
+
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+
+  dot.addEventListener("click", () => {
+    showSlide(i);
+    resetAuto();
+  });
+
+  dotsContainer.appendChild(dot);
+});
+
   startAuto();
 });
