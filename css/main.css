@@ -594,6 +594,25 @@ a {
     display: none;
   }
 
+    .process-steps {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .step {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  .process-steps::-webkit-scrollbar {
+    display: none;
+  }
+
   /* CTA */
   .cta h2 {
     font-size: 1.5rem;
