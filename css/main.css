@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -514,6 +519,11 @@ a {
     gap: 1.25rem;
   }
 
+  .project-card {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
   /* SERVICES */
   .services-grid {
     grid-template-columns: 1fr;
@@ -521,6 +531,8 @@ a {
   }
 
   .service-card {
+    min-width: 0 !important;
+    width: 100%;
     padding: 1.5rem;
   }
 
@@ -530,9 +542,30 @@ a {
     gap: 1.5rem;
   }
 
+  .process-step {
+    min-width: 0 !important;
+    width: 100%;
+  }
+
   /* CTA */
   .cta h2 {
     font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .hero,
+  .hero-content,
+  .hero-inner {
+    width: 100%;
+    max-width: 100%;
+    left: auto;
+    transform: none;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    text-align: center;
   }
 
 }
