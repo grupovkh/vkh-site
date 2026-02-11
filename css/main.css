@@ -292,13 +292,19 @@ a {
    SECTIONS (GLOBAL)
 ========================= */
 .section {
-  padding: 1rem var(--side-padding);
+  padding: 4rem var(--side-padding);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 15px 10px;
+    padding: 3rem 0;
   }
+  .section-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--side-padding);
+  padding-right: var(--side-padding);
+}
 }
 
 .section-header {
