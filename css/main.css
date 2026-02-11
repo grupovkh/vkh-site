@@ -567,3 +567,40 @@ a {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  /* PROJECTS — swipe */
+  .projects-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+  }
+
+  .project-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  /* SERVICES — swipe */
+  .services-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.5rem;
+  }
+
+  .service-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+
+  /* Optional: hide scrollbar (mobile safe) */
+  .projects-grid::-webkit-scrollbar,
+  .services-grid::-webkit-scrollbar {
+    display: none;
+  }
+}
