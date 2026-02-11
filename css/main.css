@@ -511,6 +511,51 @@ a {
     font-size: 0.95rem;
   }
 
+    /* Hide all navbar options */
+  nav ul,
+  nav .nav-links,
+  nav .menu,
+  nav .hamburger {
+    display: none !important;
+  }
+
+  /* Center the brand container */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 12px;
+    height: auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .logo {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+
+  .brand-text strong {
+    font-size: 1rem;
+  }
+
+  .brand-text span {
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+
  .projects-grid {
     display: flex;
     gap: 1rem;
