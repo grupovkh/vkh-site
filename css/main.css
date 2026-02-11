@@ -161,7 +161,6 @@ a {
   left: 0;
   width: 100%;
   height: 35%; /* only top portion */
-  inset: 0;
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.75),

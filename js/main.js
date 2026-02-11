@@ -1,12 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slide");
-  const dots = document.querySelectorAll(".dot");
+  const dotsContainer = document.querySelector(".slider-dots");
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
 
   let current = 0;
   let interval;
 
+  /* --- CREATE DOTS --- */
+  slides.forEach((_, i) => {
+    const btn = document.createElement("button");
+    if (i === 0) btn.classList.add("active");
+
+    btn.addEventListener("click", () => {
+      showSlide(i);
+      resetAuto();
+    });
+
+    dotsContainer.appendChild(btn);
+  });
+
+  const dots = dotsContainer.querySelectorAll("button");
+
+  /* --- SLIDE LOGIC --- */
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.classList.toggle("active", i === index);
@@ -36,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startAuto();
   }
 
-  // Button controls
+  /* --- CONTROLS --- */
   nextBtn.addEventListener("click", () => {
     nextSlide();
     resetAuto();
@@ -46,29 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     prevSlide();
     resetAuto();
   });
-
-  // Dot controls
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      showSlide(i);
-      resetAuto();
-    });
-  });
-
-const dotsContainer = document.querySelector(".slider-dots");
-
-slides.forEach((_, i) => {
-  const dot = document.createElement("button");
-  dot.classList.add("dot");
-  if (i === 0) dot.classList.add("active");
-
-  dot.addEventListener("click", () => {
-    showSlide(i);
-    resetAuto();
-  });
-
-  dotsContainer.appendChild(dot);
-});
 
   startAuto();
 });
