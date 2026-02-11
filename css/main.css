@@ -129,11 +129,10 @@ a {
 
 /* Slider */
 .hero-slider {
-  position: relative;
+  position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  flex: 1;
 }
 
 .slide {
@@ -169,7 +168,7 @@ a {
     rgba(0,0,0,0.35),
     rgba(0,0,0,0)
   );
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -220,6 +219,27 @@ a {
 }
 
 /* Slider controls (hidden for now, usable later) */
+
+.slider-controls .prev::before,
+.slider-controls .next::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.slider-controls .prev::before {
+  transform: rotate(-135deg);
+}
+
+.slider-controls .next::before {
+  transform: rotate(45deg);
+}
+
 .slider-controls,
 .slider-dots {
   position: absolute;
