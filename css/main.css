@@ -599,4 +599,10 @@ a {
     font-size: 1.5rem;
   }
 
+    section {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
 }
