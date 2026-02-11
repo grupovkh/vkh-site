@@ -219,7 +219,7 @@ a {
 }
 
 /* Slider controls (hidden for now, usable later) */
-
+/*
 .slider-controls .prev::before,
 .slider-controls .next::before {
   content: "";
@@ -238,7 +238,7 @@ a {
 
 .slider-controls .next::before {
   transform: rotate(45deg);
-}
+} */
 
 .slider-controls,
 .slider-dots {
