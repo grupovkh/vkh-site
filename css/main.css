@@ -292,12 +292,12 @@ a {
    SECTIONS (GLOBAL)
 ========================= */
 .section {
-  padding: 4rem var(--side-padding);
+  padding: 1rem var(--side-padding);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
   .section-inner {
   max-width: var(--max-width);
