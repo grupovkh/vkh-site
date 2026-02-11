@@ -482,3 +482,57 @@ a {
 .socials a:hover {
   color: #df2323;
 }
+
+@media (max-width: 768px) {
+
+  /* Global spacing */
+  :root {
+    --side-padding: 1.25rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 75vh;
+  }
+
+  .hero-content {
+    padding: 0 var(--side-padding);
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .motto {
+    font-size: 0.95rem;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  /* PROCESS */
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  /* CTA */
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+}
