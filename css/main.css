@@ -297,7 +297,7 @@ a {
 
 @media (max-width: 768px) {
   .section {
-    padding: 3rem 0;
+    padding: 3rem 3rem;
   }
 }
 
@@ -605,7 +605,7 @@ a {
   }
 
   .step {
-    flex: 0 0 85%;
+    flex: 0 0 45%;
     scroll-snap-align: start;
   }
 
